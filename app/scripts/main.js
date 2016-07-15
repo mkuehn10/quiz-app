@@ -20,18 +20,17 @@ $(function () {
 
     function setupQuestionWrapper(question) {
         var current = questions[question];
-        if (currentQuestion == 0) {
+        if (currentQuestion === 0) {
             $('.question-header').text('Tutorial Question');
             disableButtons();
             $('#tutorial-button').removeClass('btn-warning');
-        $('#tutorial-button').text('Continue')
-        // $('#tutorial-button').click(nextQuestion);
+            $('#tutorial-button').text('Continue');
         } else {
             $('.question-header').text('Question ' + currentQuestion);
-        };
+        }
 
         $('#nameOne').text(questions[question].nameOne);
-        $('#nameTwo').text(questions[question].nameTwo)
+        $('#nameTwo').text(questions[question].nameTwo);
         $('#imageOne').attr('src', current.imageOne);
         $('#imageTwo').attr('src', current.imageTwo);
 
@@ -76,7 +75,7 @@ $(function () {
         // $('#tutorial-one-c').hide();
         $('#skip-button').hide();
         $('#tutorial-button').addClass('btn-warning');
-        $('#tutorial-button').text('Ready!')
+        $('#tutorial-button').text('Ready!');
         $('#tutorial-button').off('click').on('click', nextQuestion);
         $('.next-button').off('click').on('click', nextQuestion);
     }
@@ -91,7 +90,7 @@ $(function () {
         var current = questions[question];
         $('.question-header').text('Question ' + currentQuestion);
         $('#nameOne').text(questions[question].nameOne);
-        $('#nameTwo').text(questions[question].nameTwo)
+        $('#nameTwo').text(questions[question].nameTwo);
         $('#imageOne').attr('src', current.imageOne);
         $('#imageTwo').attr('src', current.imageTwo);
         currentAnswer = questions[question].correctAnswer;
@@ -102,11 +101,11 @@ $(function () {
         $('.question-header').text('Question ' + currentQuestion + ' Results');
         if (currentAnswer[0] == userAnswer[0]) {
             $('#results-box').css('background-color', 'green');
-            $('#results-box h3').text('Correct!')
+            $('#results-box h3').text('Correct!');
             resultTracker.push(true);
         } else {
             $('#results-box').css('background-color', 'crimson');
-            $('#results-box h3').text('Incorrect!')
+            $('#results-box h3').text('Incorrect!');
             resultTracker.push(false);
         }
         $('#results-box').show();
@@ -127,17 +126,17 @@ $(function () {
         $('#top-right').removeClass('btn-success');
         $('#bottom-left').removeClass('btn-success');
         $('#bottom-right').removeClass('btn-success');
-        $('#top-left').addClass('btn-default');
-        $('#top-right').addClass('btn-default');
-        $('#bottom-left').addClass('btn-default');
-        $('#bottom-right').addClass('btn-default');
+        $('#top-left').addClass('btn-danger');
+        $('#top-right').addClass('btn-danger');
+        $('#bottom-left').addClass('btn-danger');
+        $('#bottom-right').addClass('btn-danger');
     }
     function nextQuestion() {
         $('#tutorial-one-a').hide();
         $('#results-box').hide();
         $('.next-button').show();
         $('.next-button').off('click').on('click', nextQuestion);
-        $('#skip-button').hide()
+        $('#skip-button').hide();
         $('#tutorial-button').hide();
         resetButtons();
         $('#top-left').off('click').on('click', buttonClicked);
@@ -166,22 +165,14 @@ $(function () {
                 score++;
             } else {
                 mark = '<span class="incorrect">✗</span>';
-            };
+            }
 
             $('.q' + (n + 1)).html('Question ' + (n + 1) + ': ' + mark);
         });
         $('.overall').text(score + '/5  ' + ((score / 5) * 100) + '%');
-        // $('.restart-button').click(initializeQuiz);
     }
-
-
-
-
-
-
-
-
     function buttonClicked() {
+        $(event.target).closest('button').removeClass('btn-danger');
         $(event.target).closest('button').addClass('btn-success');
         var clickedOn = $(event.target).closest('button').attr('id');
         // console.log(clickedOn);
@@ -189,56 +180,55 @@ $(function () {
             case 'top-left':
             {
                 $('#top-right').removeClass('btn-success');
-                $('#top-right').addClass('btn-default');
+                $('#top-right').addClass('btn-danger');
                 $('#bottom-left').removeClass('btn-success');
-                $('#bottom-left').addClass('btn-default');
+                $('#bottom-left').addClass('btn-danger');
 
                 $('#bottom-right').addClass('btn-success');
-                $('#bottom-right').removeClass('btn-default');
+                $('#bottom-right').removeClass('btn-danger');
                 userAnswer = [0, 3];
                 break;
             }
             case 'bottom-left':
             {
                 $('#top-left').removeClass('btn-success');
-                $('#top-left').addClass('btn-default');
+                $('#top-left').addClass('btn-danger');
                 $('#bottom-right').removeClass('btn-success');
-                $('#bottom-right').addClass('btn-default');
+                $('#bottom-right').addClass('btn-danger');
 
                 $('#top-right').addClass('btn-success');
-                $('#top-right').removeClass('btn-default');
+                $('#top-right').removeClass('btn-danger');
                 userAnswer = [1, 2];
                 break;
             }
             case 'top-right':
             {
                 $('#top-left').removeClass('btn-success');
-                $('#top-left').addClass('btn-default');
+                $('#top-left').addClass('btn-danger');
                 $('#bottom-right').removeClass('btn-success');
-                $('#bottom-right').addClass('btn-default');
+                $('#bottom-right').addClass('btn-danger');
 
                 $('#bottom-left').addClass('btn-success');
-                $('#bottom-left').removeClass('btn-default');
+                $('#bottom-left').removeClass('btn-danger');
                 userAnswer = [1, 2];
                 break;
             }
             case 'bottom-right':
             {
                 $('#top-right').removeClass('btn-success');
-                $('#top-right').addClass('btn-default');
+                $('#top-right').addClass('btn-danger');
                 $('#bottom-left').removeClass('btn-success');
-                $('#bottom-left').addClass('btn-default');
+                $('#bottom-left').addClass('btn-danger');
 
                 $('#top-left').addClass('btn-success');
-                $('#top-left').removeClass('btn-default');
+                $('#top-left').removeClass('btn-danger');
                 userAnswer = [0, 3];
                 break;
             }
             default:
             {
-                console.log('Something went wrong!')
+                console.log('Something went wrong!');
             }
         }
-        // console.log(userAnswer);
     }
 });
