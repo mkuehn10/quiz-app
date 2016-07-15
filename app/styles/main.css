@@ -74,6 +74,7 @@ body {
 #intro-wrapper {
     width: 1000px;
     height: 465px;
+    display: none;
 
 }
 /** {

@@ -1,32 +1,65 @@
 $(function () {
     'use strict';
     var currentQuestion;
-    var userAnswer = [];
-    var currentAnswer = [];
-    var resultTracker = [];
+    var userAnswer;
+    var currentAnswer;
+    var resultTracker;
+
+    initializeQuiz();
 
     function initializeQuiz() {
         currentQuestion = 0;
+        userAnswer = [];
+        currentAnswer = [];
+        resultTracker = [];
         $('#intro-wrapper').show();
         $('#question-wrapper').hide();
         $('#results-wrapper').hide();
-        // showIntro();
-        // showIntro();
+        setupQuestionWrapper(currentQuestion);
+    }
+
+    function setupQuestionWrapper(question) {
+        var current = questions[question];
+        if (currentQuestion == 0) {
+            $('.question-header').text('Tutorial Question');
+            disableButtons();
+            $('#tutorial-button').removeClass('btn-warning');
+        $('#tutorial-button').text('Continue')
+        // $('#tutorial-button').click(nextQuestion);
+        } else {
+            $('.question-header').text('Question ' + currentQuestion);
+        };
+
+        $('#nameOne').text(questions[question].nameOne);
+        $('#nameTwo').text(questions[question].nameTwo)
+        $('#imageOne').attr('src', current.imageOne);
+        $('#imageTwo').attr('src', current.imageTwo);
+
+    }
+
+    $('.start-button').off('click').on('click', startQuiz);
+    $('.restart-button').off('click').on('click', initializeQuiz);
+
+    function startQuiz() {
+        $('#intro-wrapper').hide();
+        $('#results-wrapper').hide();
+        $('#question-wrapper').show();
+        showIntro();
     }
 
     function tutorialA() {
         $('#tutorial-one-a').show();
         $('#tutorial-button').show();
         $('#skip-button').show();
-        $('#skip-button').click(nextQuestion);
-        $('#tutorial-button').click(tutorialB);
+        $('#skip-button').off('click').on('click', nextQuestion);
+        $('#tutorial-button').off('click').on('click', tutorialB);
     }
 
     function tutorialB() {
         $('#tutorial-one-a h3').text('Click on the corresponding arrow.');
         $('#top-left').addClass('btn-success');
         $('#bottom-right').addClass('btn-success');
-        $('#tutorial-button').click(tutorialC);
+        $('#tutorial-button').off('click').on('click', tutorialC);
     }
 
     function tutorialC() {
@@ -34,17 +67,17 @@ $(function () {
         $('.next-button').show();
         $('#tutorial-one-a h3').text('Click on the right arrow to see if you were right.');
         $('#tutorial-one-b').hide();
-        $('#tutorial-button').click(tutorialD);
+        $('#tutorial-button').off('click').on('click', tutorialD);
     }
 
     function tutorialD() {
         $('#tutorial-one-a h3').text('Click on ready to continue.');
-        $('#tutorial-one-b').hide();
-        $('#tutorial-one-c').hide();
+        // $('#tutorial-one-b').hide();
+        // $('#tutorial-one-c').hide();
         $('#skip-button').hide();
         $('#tutorial-button').addClass('btn-warning');
         $('#tutorial-button').text('Ready!')
-        $('#tutorial-button').click(nextQuestion);
+        $('#tutorial-button').off('click').on('click', nextQuestion);
         $('.next-button').off('click').on('click', nextQuestion);
     }
 
@@ -67,8 +100,6 @@ $(function () {
 
     function resultsQuestion() {
         $('.question-header').text('Question ' + currentQuestion + ' Results');
-        // console.log("currentAnswer: " + currentAnswer);
-        // console.log("userAnswer: " + userAnswer);
         if (currentAnswer[0] == userAnswer[0]) {
             $('#results-box').css('background-color', 'green');
             $('#results-box h3').text('Correct!')
@@ -80,6 +111,11 @@ $(function () {
         }
         $('#results-box').show();
         $('.next-button').off('click').on('click', nextQuestion);
+        disableButtons();
+        userAnswer = [];
+    }
+
+    function disableButtons () {
         $('#top-left').off('click');
         $('#top-right').off('click');
         $('#bottom-left').off('click');
@@ -91,6 +127,10 @@ $(function () {
         $('#top-right').removeClass('btn-success');
         $('#bottom-left').removeClass('btn-success');
         $('#bottom-right').removeClass('btn-success');
+        $('#top-left').addClass('btn-default');
+        $('#top-right').addClass('btn-default');
+        $('#bottom-left').addClass('btn-default');
+        $('#bottom-right').addClass('btn-default');
     }
     function nextQuestion() {
         $('#tutorial-one-a').hide();
@@ -136,20 +176,9 @@ $(function () {
 
 
 
-    function startQuiz() {
-        // initializeQuiz();
 
-        $('#intro-wrapper').hide();
-        $('#results-wrapper').hide();
-        $('#question-wrapper').show();
-        // initializeQuiz();
-        showIntro();
 
-    }
 
-    $('.start-button').click(startQuiz);
-
-    initializeQuiz();
 
 
     function buttonClicked() {
