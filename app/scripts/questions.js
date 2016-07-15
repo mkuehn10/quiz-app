@@ -8,41 +8,41 @@ var questions = [{
 },
 {
     id: 1,
-    imageOne: '',
-    nameOne: '',
-    imageTwo: '',
-    nameTwo: '',
+    imageOne: 'images/q1_img1.png',
+    nameOne: 'The Burger King',
+    imageTwo: 'images/q1_img2.png',
+    nameTwo: 'Mel Gibson',
     correctAnswer: []
 },
 {
     id: 2,
-    imageOne: '',
-    nameOne: '',
-    imageTwo: '',
-    nameTwo: '',
+    imageOne: 'images/q2_img1.jpg',
+    nameOne: 'Djimon Hounsou',
+    imageTwo: 'images/q2_img2.jpg',
+    nameTwo: 'Chiwetel Ejiofor',
     correctAnswer: []
 },
 {
     id: 3,
-    imageOne: '',
-    nameOne: '',
-    imageTwo: '',
-    nameTwo: '',
+    imageOne: 'images/q3_img1.png',
+    nameOne: 'Stephen Colbert',
+    imageTwo: 'images/q3_img2.png',
+    nameTwo: 'Bob Saget',
     correctAnswer: []
 },
 {
     id: 4,
-    imageOne: '',
-    nameOne: '',
-    imageTwo: '',
-    nameTwo: '',
+    imageOne: 'images/q4_img1.png',
+    nameOne: 'Eric Dane',
+    imageTwo: 'images/q4_img2.png',
+    nameTwo: 'Leonardo DiCaprio',
     correctAnswer: []
 },
 {
     id: 5,
-    imageOne: '',
-    nameOne: '',
-    imageTwo: '',
-    nameTwo: '',
+    imageOne: 'images/q5_img1.png',
+    nameOne: 'Joe Swanson',
+    imageTwo: 'images/q5_img2.png',
+    nameTwo: 'Kevin James',
     correctAnswer: []
 }];

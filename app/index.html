@@ -44,7 +44,7 @@
                     </button>
                 </div>
                 <div class="col-xs-8 text-center">
-                    <span>Dylan McDermott</span>
+                    <span id="nameOne">Dylan McDermott</span>
                 </div>
                 <div class="col-xs-2">
                     <button id="top-right" type="button" class="btn btn-default btn-lg">
@@ -57,7 +57,7 @@
                     </button>
                 </div>
                 <div class="col-xs-8 text-center">
-                    <span>Dermot Mulrooney</span>
+                    <span id="nameTwo">Dermot Mulrooney</span>
                 </div>
                 <div class="col-xs-2">
                     <button id="bottom-right" type="button" class="btn btn-default btn-lg">
@@ -65,17 +65,9 @@
                     </button>
                 </div>
             </div>
-            <img class="left-image img-responsive" src="images/dylan.png">
-            <img class="right-image img-responsive" src="images/dermot.png">
-        </div>
-        <div class="next-button text-right">
-            <button type="button" class="btn btn-success btn-lg">
-                <span class="glyphicon glyphicon-arrow-right"></span>
-            </button>
-        </div>
-    </div>
-
-    <div id="tutorial-one-a" class="tutorial">
+            <img id="imageOne" class="left-image img-responsive" src="images/dylan.png">
+            <img id="imageTwo" class="right-image img-responsive" src="images/dermot.png">
+            <div id="tutorial-one-a" class="tutorial text-center">
     <h2>Look at the two "celebrities" to identify them.</h2>
     </div>
     <div id="tutorial-one-b" class="tutorial">
@@ -83,6 +75,20 @@
     <div id="tutorial-one-c" class="tutorial">
     </div>
     <button type="button" id="tutorial-button" class="btn btn-info btn-lg tutorial">Continue</button>
+        </div>
+        <div class="next-button text-right">
+            <button type="button" class="btn btn-success btn-lg">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+            </button>
+        </div>
+
+    </div>
+
+    <div id="results-wrapper" class="container">
+    TEST
+    </div>
+
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b, o, i, l, e, r) {

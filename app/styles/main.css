@@ -10,11 +10,13 @@ body {
     padding-top: 100px;
     padding-bottom: 20px;
     font-family: 'Fjalla One', sans-serif;
+    background-color: darkslategray;
 }
 
 .container {
     width: 1000px;
     padding: 0;
+    background-color: antiquewhite;
 }
 .question-header {
     text-align: center;
@@ -27,6 +29,7 @@ body {
     left: 0;
     width: 200px;
     height: 300px;
+    object-fit: cover;
 }
 
 .right-image {
@@ -36,6 +39,7 @@ body {
     right: 0;
     width: 200px;
     height: 300px;
+    object-fit: cover;
 }
 
 .question-container {
@@ -61,13 +65,20 @@ body {
     width: 100px;
 }
 
-#question-wrapper {
+#question-wrapper, #results-wrapper {
     display: none;
+    width: 1000px;
+    height: 465px;
 }
 
-* {
-    border: 1px dashed red;
+#intro-wrapper {
+    width: 1000px;
+    height: 465px;
+
 }
+/** {
+    border: 1px dashed red;
+}*/
 
 .start-button {
     font-size: 40px;
@@ -96,8 +107,9 @@ body {
     width: 575px;
     height: 75px;
     background-color: steelblue;
-    top: 170px;
-    left: 365px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%);
     background-color: crimson;
     color: snow;
 }
@@ -108,24 +120,25 @@ body {
 
 #tutorial-one-b, #tutorial-one-c {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
     border: 5px dotted crimson;
 
 }
 
 #tutorial-one-b {
-    top: 200px;
-    left: 175px;
+    top: 25px;
+    left: 25px;
 }
 
 #tutorial-one-c {
-    top: 205px;
-    right: 205px;
+    top: 275px;
+    right: 10px;
 }
 #tutorial-button {
     position: absolute;
-    top: 390px;
-    left: 565px;
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%);
 }
