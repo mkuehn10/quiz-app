@@ -57,7 +57,7 @@ body {
     margin: 0;
 }
 
-.next-button {
+.next-button-div {
     padding: 15px;
 }
 .glyphicon-arrow-right {
@@ -141,4 +141,47 @@ body {
     top: 230px;
     left: 50%;
     transform: translate(-50%);
+}
+
+#skip-button {
+    position: absolute;
+    display: block;
+    top: 285px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#results-box {
+    position: absolute;
+    display: none;
+    color: white;
+    top: 210px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: crimson;
+    width: 500px;
+    height: 75px;
+    /*font-size: 16px;*/
+}
+
+.correct {
+    color: green;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.restart-button {
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    /*margin-top: 75px;*/
+    /*margin-bottom: 75px;*/
+    bottom: 285px;
 }

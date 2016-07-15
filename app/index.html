@@ -28,110 +28,120 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-    <div id="intro-wrapper" class="container">
-        <h1 class="text-center">Welcome to the Celebrity Look-alike Quiz<span class="glyphicon glyphicon-star star"></span>!</h1>
-        <button type="button" class="btn btn-success btn-lg start-button">Take the Quiz!</button>
-        <p class="text-center"><span class="glyphicon glyphicon-star star lower"></span>Based on the popular game show <a href="http://bfy.tw/6kUv" target="dylandermot">“Dylan McDermott or Dermot Mulroney?”</a> from Saturday Night Live</p>
-    </div>
+<div id="intro-wrapper" class="container">
+    <h1 class="text-center">Welcome to the Celebrity Look-alike Quiz<span class="glyphicon glyphicon-star star"></span>!</h1>
+    <button type="button" class="btn btn-success btn-lg start-button">Take the Quiz!</button>
+    <p class="text-center"><span class="glyphicon glyphicon-star star lower"></span>Based on the popular game show <a href="http://bfy.tw/6kUv" target="dylandermot">“Dylan McDermott or Dermot Mulroney?”</a> from Saturday Night Live</p>
+</div>
 
-    <div id="question-wrapper" class="container">
-        <h1 class="question-header">Tutorial Question</h1>
-        <div class="question-container">
-            <div class="row question-options">
-                <div class="col-xs-2">
-                    <button id="top-left" type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-triangle-left"></span>
-                    </button>
-                </div>
-                <div class="col-xs-8 text-center">
-                    <span id="nameOne">Dylan McDermott</span>
-                </div>
-                <div class="col-xs-2">
-                    <button id="top-right" type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-triangle-right"></span>
-                    </button>
-                </div>
-                <div class="col-xs-2">
-                    <button id="bottom-left" type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-triangle-left"></span>
-                    </button>
-                </div>
-                <div class="col-xs-8 text-center">
-                    <span id="nameTwo">Dermot Mulrooney</span>
-                </div>
-                <div class="col-xs-2">
-                    <button id="bottom-right" type="button" class="btn btn-default btn-lg">
-                        <span class="glyphicon glyphicon-triangle-right"></span>
-                    </button>
-                </div>
+<div id="question-wrapper" class="container">
+    <h1 class="question-header">Tutorial Question</h1>
+    <div class="question-container">
+        <div class="row question-options">
+            <div class="col-xs-2">
+                <button id="top-left" type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-triangle-left"></span>
+                </button>
             </div>
-            <img id="imageOne" class="left-image img-responsive" src="images/dylan.png">
-            <img id="imageTwo" class="right-image img-responsive" src="images/dermot.png">
-            <div id="tutorial-one-a" class="tutorial text-center">
-    <h2>Look at the two "celebrities" to identify them.</h2>
-    </div>
-    <div id="tutorial-one-b" class="tutorial">
-    </div>
-    <div id="tutorial-one-c" class="tutorial">
-    </div>
-    <button type="button" id="tutorial-button" class="btn btn-info btn-lg tutorial">Continue</button>
+            <div class="col-xs-8 text-center">
+                <span id="nameOne">Dylan McDermott</span>
+            </div>
+            <div class="col-xs-2">
+                <button id="top-right" type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-triangle-right"></span>
+                </button>
+            </div>
+            <div class="col-xs-2">
+                <button id="bottom-left" type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-triangle-left"></span>
+                </button>
+            </div>
+            <div class="col-xs-8 text-center">
+                <span id="nameTwo">Dermot Mulrooney</span>
+            </div>
+            <div class="col-xs-2">
+                <button id="bottom-right" type="button" class="btn btn-default btn-lg">
+                    <span class="glyphicon glyphicon-triangle-right"></span>
+                </button>
+            </div>
         </div>
-        <div class="next-button text-right">
-            <button type="button" class="btn btn-success btn-lg">
-                <span class="glyphicon glyphicon-arrow-right"></span>
-            </button>
+        <img id="imageOne" class="left-image img-responsive" src="images/dylan.png">
+        <img id="imageTwo" class="right-image img-responsive" src="images/dermot.png">
+        <div id="tutorial-one-a" class="tutorial text-center">
+            <h3>Look at the two "celebrities" to identify them.</h3>
         </div>
-
+        <div id="results-box" class="text-center">
+            <h3></h3>
+        </div>
+        <div id="tutorial-one-b" class="tutorial">
+        </div>
+        <div id="tutorial-one-c" class="tutorial">
+        </div>
+        <button type="button" id="tutorial-button" class="btn btn-info btn-lg tutorial">Continue</button>
+        <button type="button" id="skip-button" class="btn btn-danger btn-lg tutorial">Skip Tutorial</button>
     </div>
-
-    <div id="results-wrapper" class="container">
-    TEST
+    <div class="next-button-div text-right">
+        <button type="button" class="btn btn-success btn-lg next-button">
+            <span class="glyphicon glyphicon-arrow-right"></span>
+        </button>
     </div>
+</div>
 
+<div id="results-wrapper" class="container">
+    <h1 class="text-center">How did you do?</h1>
+    <div class="results-table text-center">
+        <h2 class="q1"></h2>
+        <h2 class="q2"></h2>
+        <h2 class="q3"></h2>
+        <h2 class="q4"></h2>
+        <h2 class="q5"></h2>
+        <h2 class="overall">4/5 80%</h2>
+    </div>
+   <!--  <button type="button" class="btn btn-success btn-lg restart-button">Try Again!</button> -->
+</div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l;
-            b[l] || (b[l] =
-                function() {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = 'https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-80275020-1');
-        ga('send', 'pageview');
-    </script>
+<script>
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-80275020-1');
+    ga('send', 'pageview');
+</script>
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap/js/affix.js"></script>
-    <script src="/bower_components/bootstrap/js/alert.js"></script>
-    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
-    <script src="/bower_components/bootstrap/js/modal.js"></script>
-    <script src="/bower_components/bootstrap/js/transition.js"></script>
-    <script src="/bower_components/bootstrap/js/button.js"></script>
-    <script src="/bower_components/bootstrap/js/popover.js"></script>
-    <script src="/bower_components/bootstrap/js/carousel.js"></script>
-    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap/js/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/tab.js"></script>
-    <!-- endbuild -->
+<!-- build:js scripts/plugins.js -->
+<script src="/bower_components/bootstrap/js/affix.js"></script>
+<script src="/bower_components/bootstrap/js/alert.js"></script>
+<script src="/bower_components/bootstrap/js/dropdown.js"></script>
+<script src="/bower_components/bootstrap/js/tooltip.js"></script>
+<script src="/bower_components/bootstrap/js/modal.js"></script>
+<script src="/bower_components/bootstrap/js/transition.js"></script>
+<script src="/bower_components/bootstrap/js/button.js"></script>
+<script src="/bower_components/bootstrap/js/popover.js"></script>
+<script src="/bower_components/bootstrap/js/carousel.js"></script>
+<script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+<script src="/bower_components/bootstrap/js/collapse.js"></script>
+<script src="/bower_components/bootstrap/js/tab.js"></script>
+<!-- endbuild -->
 
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/questions.js"></script>
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+<!-- build:js scripts/main.js -->
+<script src="scripts/questions.js"></script>
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
 </body>
 
 </html>

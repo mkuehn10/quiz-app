@@ -12,7 +12,7 @@ var questions = [{
     nameOne: 'The Burger King',
     imageTwo: 'images/q1_img2.png',
     nameTwo: 'Mel Gibson',
-    correctAnswer: []
+    correctAnswer: [0, 3]
 },
 {
     id: 2,
@@ -20,7 +20,7 @@ var questions = [{
     nameOne: 'Djimon Hounsou',
     imageTwo: 'images/q2_img2.jpg',
     nameTwo: 'Chiwetel Ejiofor',
-    correctAnswer: []
+    correctAnswer: [0, 3]
 },
 {
     id: 3,
@@ -28,7 +28,7 @@ var questions = [{
     nameOne: 'Stephen Colbert',
     imageTwo: 'images/q3_img2.png',
     nameTwo: 'Bob Saget',
-    correctAnswer: []
+    correctAnswer: [1, 2]
 },
 {
     id: 4,
@@ -36,7 +36,7 @@ var questions = [{
     nameOne: 'Eric Dane',
     imageTwo: 'images/q4_img2.png',
     nameTwo: 'Leonardo DiCaprio',
-    correctAnswer: []
+    correctAnswer: [1, 2]
 },
 {
     id: 5,
@@ -44,5 +44,5 @@ var questions = [{
     nameOne: 'Joe Swanson',
     imageTwo: 'images/q5_img2.png',
     nameTwo: 'Kevin James',
-    correctAnswer: []
+    correctAnswer: [1, 2]
 }];
