@@ -9,6 +9,7 @@
 body {
     padding-top: 100px;
     padding-bottom: 20px;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .container {
@@ -58,4 +59,73 @@ body {
 .glyphicon-arrow-right {
     font-size: 40px;
     width: 100px;
+}
+
+#question-wrapper {
+    display: none;
+}
+
+* {
+    border: 1px dashed red;
+}
+
+.start-button {
+    font-size: 40px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+#intro-wrapper h1 {
+    font-size: 50px;
+}
+.star {
+    font-size: 12px;
+    transform: translateY(-3em);
+    color: crimson;
+}
+
+.lower {
+    transform: translateY(-0.5em);
+}
+
+#tutorial-one-a {
+    position: absolute;
+    width: 575px;
+    height: 75px;
+    background-color: steelblue;
+    top: 170px;
+    left: 365px;
+    background-color: crimson;
+    color: snow;
+}
+
+.tutorial {
+    display: none;
+}
+
+#tutorial-one-b, #tutorial-one-c {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 5px dotted crimson;
+
+}
+
+#tutorial-one-b {
+    top: 200px;
+    left: 175px;
+}
+
+#tutorial-one-c {
+    top: 205px;
+    right: 205px;
+}
+#tutorial-button {
+    position: absolute;
+    top: 390px;
+    left: 565px;
 }
