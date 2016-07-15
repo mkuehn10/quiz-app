@@ -56,7 +56,9 @@ $(function () {
 
     function tutorialB() {
         $('#tutorial-one-a h3').text('Click on the corresponding arrow.');
+        $('#top-left').removeClass('btn-danger');
         $('#top-left').addClass('btn-success');
+        $('#bottom-right').removeClass('btn-danger');
         $('#bottom-right').addClass('btn-success');
         $('#tutorial-button').off('click').on('click', tutorialC);
     }
