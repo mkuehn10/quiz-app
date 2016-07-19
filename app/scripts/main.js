@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     'use strict';
     var currentQuestion;
     var userAnswer;
@@ -116,7 +116,7 @@ $(function () {
         userAnswer = [];
     }
 
-    function disableButtons () {
+    function disableButtons() {
         $('#top-left').off('click');
         $('#top-right').off('click');
         $('#bottom-left').off('click');
@@ -133,6 +133,7 @@ $(function () {
         $('#bottom-left').addClass('btn-danger');
         $('#bottom-right').addClass('btn-danger');
     }
+
     function nextQuestion() {
         $('#tutorial-one-a').hide();
         $('#results-box').hide();
@@ -173,6 +174,7 @@ $(function () {
         });
         $('.overall').text(score + '/5  ' + ((score / 5) * 100) + '%');
     }
+
     function buttonClicked() {
         $(event.target).closest('button').removeClass('btn-danger');
         $(event.target).closest('button').addClass('btn-success');
@@ -180,57 +182,57 @@ $(function () {
         // console.log(clickedOn);
         switch (clickedOn) {
             case 'top-left':
-            {
-                $('#top-right').removeClass('btn-success');
-                $('#top-right').addClass('btn-danger');
-                $('#bottom-left').removeClass('btn-success');
-                $('#bottom-left').addClass('btn-danger');
+                {
+                    $('#top-right').removeClass('btn-success');
+                    $('#top-right').addClass('btn-danger');
+                    $('#bottom-left').removeClass('btn-success');
+                    $('#bottom-left').addClass('btn-danger');
 
-                $('#bottom-right').addClass('btn-success');
-                $('#bottom-right').removeClass('btn-danger');
-                userAnswer = [0, 3];
-                break;
-            }
+                    $('#bottom-right').addClass('btn-success');
+                    $('#bottom-right').removeClass('btn-danger');
+                    userAnswer = [0, 3];
+                    break;
+                }
             case 'bottom-left':
-            {
-                $('#top-left').removeClass('btn-success');
-                $('#top-left').addClass('btn-danger');
-                $('#bottom-right').removeClass('btn-success');
-                $('#bottom-right').addClass('btn-danger');
+                {
+                    $('#top-left').removeClass('btn-success');
+                    $('#top-left').addClass('btn-danger');
+                    $('#bottom-right').removeClass('btn-success');
+                    $('#bottom-right').addClass('btn-danger');
 
-                $('#top-right').addClass('btn-success');
-                $('#top-right').removeClass('btn-danger');
-                userAnswer = [1, 2];
-                break;
-            }
+                    $('#top-right').addClass('btn-success');
+                    $('#top-right').removeClass('btn-danger');
+                    userAnswer = [1, 2];
+                    break;
+                }
             case 'top-right':
-            {
-                $('#top-left').removeClass('btn-success');
-                $('#top-left').addClass('btn-danger');
-                $('#bottom-right').removeClass('btn-success');
-                $('#bottom-right').addClass('btn-danger');
+                {
+                    $('#top-left').removeClass('btn-success');
+                    $('#top-left').addClass('btn-danger');
+                    $('#bottom-right').removeClass('btn-success');
+                    $('#bottom-right').addClass('btn-danger');
 
-                $('#bottom-left').addClass('btn-success');
-                $('#bottom-left').removeClass('btn-danger');
-                userAnswer = [1, 2];
-                break;
-            }
+                    $('#bottom-left').addClass('btn-success');
+                    $('#bottom-left').removeClass('btn-danger');
+                    userAnswer = [1, 2];
+                    break;
+                }
             case 'bottom-right':
-            {
-                $('#top-right').removeClass('btn-success');
-                $('#top-right').addClass('btn-danger');
-                $('#bottom-left').removeClass('btn-success');
-                $('#bottom-left').addClass('btn-danger');
+                {
+                    $('#top-right').removeClass('btn-success');
+                    $('#top-right').addClass('btn-danger');
+                    $('#bottom-left').removeClass('btn-success');
+                    $('#bottom-left').addClass('btn-danger');
 
-                $('#top-left').addClass('btn-success');
-                $('#top-left').removeClass('btn-danger');
-                userAnswer = [0, 3];
-                break;
-            }
+                    $('#top-left').addClass('btn-success');
+                    $('#top-left').removeClass('btn-danger');
+                    userAnswer = [0, 3];
+                    break;
+                }
             default:
-            {
-                console.log('Something went wrong!');
-            }
+                {
+                    console.log('Something went wrong!');
+                }
         }
     }
 });
