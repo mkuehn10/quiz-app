@@ -339,18 +339,22 @@
     #top-left {
         top: -3px;
         left: 95px;
+        z-index: 10;
     }
     #top-right {
         top: -3px;
         right: 80px;
+        z-index: 10;
     }
     #bottom-left {
         top: -2px;
         left: 96px;
+        z-index: 10;
     }
     #bottom-right {
         top: -2px;
         right: 80px;
+        z-index: 10;
     }
 }
 
