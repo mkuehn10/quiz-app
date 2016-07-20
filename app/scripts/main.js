@@ -73,8 +73,6 @@ $(function() {
 
     function tutorialD() {
         $('#tutorial-one-a h3').text('Click on ready to continue.');
-        // $('#tutorial-one-b').hide();
-        // $('#tutorial-one-c').hide();
         $('#skip-button').hide();
         $('#tutorial-button').addClass('btn-warning');
         $('#tutorial-button').text('Ready!');
@@ -88,7 +86,6 @@ $(function() {
     }
 
     function populateCurrentQuestion(question) {
-        // console.log('pop Current: ' + currentQuestion);
         var current = questions[question];
         $('.question-header').text('Question ' + currentQuestion);
         $('#nameOne').text(questions[question].nameOne);
@@ -179,7 +176,6 @@ $(function() {
         $(event.target).closest('button').removeClass('btn-danger');
         $(event.target).closest('button').addClass('btn-success');
         var clickedOn = $(event.target).closest('button').attr('id');
-        // console.log(clickedOn);
         switch (clickedOn) {
             case 'top-left':
                 {
